@@ -1,0 +1,8 @@
+{
+	"[dart]": {
+		"editor.tabSize": 4
+	},
+	"dart.devToolsBrowser": "default",
+	"dart.closingLabelsPrefix": "",
+	"dart.enableSdkFormatter": false
+}
