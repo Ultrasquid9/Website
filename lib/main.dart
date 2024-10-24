@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:website/credits.dart';
+import 'package:website/home.dart';
 
 void main() {
 	runApp(const Website());
@@ -18,7 +18,7 @@ class Website extends StatelessWidget {
 			),
 
 			title: "Website",
-			home: const Credits(title: 'Inkblot Games')
+			home: const Home(title: 'Inkblot Games')
 		);
 	}
 }
