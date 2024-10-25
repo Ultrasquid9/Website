@@ -3,10 +3,12 @@ import 'package:website/credits.dart';
 import 'package:website/home.dart';
 import 'package:go_router/go_router.dart';
 
+/// Exists exclusively for the purpose of running the website
 void main() {
 	runApp(const Website());
 }
 
+/// The website base class
 class Website extends StatelessWidget {
 	const Website({super.key});
 
@@ -21,25 +23,43 @@ class Website extends StatelessWidget {
 				scaffoldBackgroundColor: const Color.fromARGB(255, 48, 52, 70),
 			),
 
+			debugShowCheckedModeBanner: false,
 			routerConfig: _router,
 		);
 	}
 }
 
+/// The pages available to navigate to on the website
 final _router = GoRouter(
 	initialLocation: '/',
 
 	routes: [
 		GoRoute(
 			path: '/',
-			builder: (context, state) => const Home(title: "Home")
+			pageBuilder: (context, state) => 
+				getPageTransition(context, state, const Home(title: "Home"))
 		),
 		GoRoute(
 			path: '/credits',
-			builder: (context, state) => const Credits(title: "Credits")
+			pageBuilder: (context, state) => 
+				getPageTransition(context, state, const Credits(title: "Home"))
 		)
 	]
 );
+
+/// Gets a fancy transition for different pages of the website
+CustomTransitionPage getPageTransition(BuildContext context, GoRouterState state, Widget child) {
+	return CustomTransitionPage(
+		child: child, 
+
+		transitionsBuilder: (context, animation, secondaryAnimation, child) {
+			return FadeTransition(
+				opacity: CurveTween(curve: Curves.easeInCirc).animate(animation),
+				child: child,
+			);
+		}
+	);
+}
 
 /// Gets the style for text
 TextStyle getTextStyle() {
@@ -62,11 +82,12 @@ ElevatedButton createButton(VoidCallback onPressed, BuildContext context, String
 /// Gets the navigation bar at the top of the website
 AppBar getBar(BuildContext context) {
 	return AppBar(
+		
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
 		title: Text("Inkblot Games", style: getTextStyle()),
 		actions: <Widget>[
             createButton(
-                () => context.go("/"), 
+                () => context.go("/",), 
                 context,
                 "Home"
             ),
