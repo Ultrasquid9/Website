@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/main.dart';
 
 class Home extends StatefulWidget {
 	const Home({super.key, required this.title});
@@ -10,13 +11,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 	@override Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(
-				backgroundColor: const Color.fromARGB(255, 202, 158, 230),
-				title: Text(widget.title),
-			),
-			body: const Column(
-                
-            )
+			appBar: getBar(),
+			body: Center(
+				child: Column(
+					mainAxisAlignment: MainAxisAlignment.center,
+					children: [
+						Text("data", style: getTextStyle())
+					],	
+				)
+			)
 		);
 	}
 }
