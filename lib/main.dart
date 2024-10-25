@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/credits.dart';
 import 'package:website/home.dart';
 
 void main() {
@@ -30,13 +31,6 @@ TextStyle getTextStyle() {
 	);
 }
 
-/// Gets the style for large text, like the "Inkblot Games" text in the corner
-TextStyle getHeaderTextStyle() {
-	return const TextStyle(
-		color: Color.fromARGB(255, 165, 173, 206),
-	);
-}
-
 /// Gets the style for buttons
 ButtonStyle getButtonStyle() {
 	return ElevatedButton.styleFrom(
@@ -45,14 +39,16 @@ ButtonStyle getButtonStyle() {
 }
 
 /// Gets the navigation bar at the top of the website
-AppBar getBar() {
+AppBar getBar(BuildContext context) {
 	return AppBar(
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
 		title: Text("Inkblot Games", style: getTextStyle()),
 		actions: <Widget>[
 			ElevatedButton(
 				onPressed: () {
-					print("button pressed");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const Credits(title: 'Credits');
+                    }));
 				},
 				 
 				style: getButtonStyle(),

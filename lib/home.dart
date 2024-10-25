@@ -11,12 +11,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 	@override Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: getBar(),
+			appBar: getBar(context),
 			body: Center(
 				child: Column(
 					mainAxisAlignment: MainAxisAlignment.center,
 					children: [
-						Text("data", style: getTextStyle())
+						SelectableText("data", style: getTextStyle())
 					],	
 				)
 			)

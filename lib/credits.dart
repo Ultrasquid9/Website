@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/main.dart';
 
 class Credits extends StatefulWidget {
 	const Credits({super.key, required this.title});
@@ -10,10 +11,7 @@ class Credits extends StatefulWidget {
 class _CreditsState extends State<Credits> {
 	@override Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(
-				backgroundColor: const Color.fromARGB(255, 202, 158, 230),
-				title: Text(widget.title),
-			),
+			appBar: getBar(context),
 			body: const Center(
 				child:Card(
 					color: Color.fromARGB(255, 48, 52, 70),
