@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/credits.dart';
 import 'package:website/home.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
 	runApp(const Website());
@@ -11,18 +12,34 @@ class Website extends StatelessWidget {
 
 	@override
 	Widget build(BuildContext context) {
-		return MaterialApp(
+		return MaterialApp.router(
+			title: "inkblot Games",
+
 			theme: ThemeData(
 				useMaterial3: true,
 
 				scaffoldBackgroundColor: const Color.fromARGB(255, 48, 52, 70),
 			),
 
-			title: "Website",
-			home: const Home(title: 'Inkblot Games')
+			routerConfig: _router,
 		);
 	}
 }
+
+final _router = GoRouter(
+	initialLocation: '/',
+
+	routes: [
+		GoRoute(
+			path: '/',
+			builder: (context, state) => const Home(title: "Home")
+		),
+		GoRoute(
+			path: '/credits',
+			builder: (context, state) => const Credits(title: "Credits")
+		)
+	]
+);
 
 /// Gets the style for text
 TextStyle getTextStyle() {
@@ -31,11 +48,15 @@ TextStyle getTextStyle() {
 	);
 }
 
-/// Gets the style for buttons
-ButtonStyle getButtonStyle() {
-	return ElevatedButton.styleFrom(
-		backgroundColor: const Color.fromARGB(255, 41, 44, 60),
-	);
+/// Creates a button
+ElevatedButton createButton(VoidCallback onPressed, BuildContext context, String title) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+		    backgroundColor: const Color.fromARGB(255, 41, 44, 60),
+	    ),
+        onPressed: onPressed,
+        child: Text(title, style: getTextStyle())
+    );
 }
 
 /// Gets the navigation bar at the top of the website
@@ -44,16 +65,16 @@ AppBar getBar(BuildContext context) {
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
 		title: Text("Inkblot Games", style: getTextStyle()),
 		actions: <Widget>[
-			ElevatedButton(
-				onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return const Credits(title: 'Credits');
-                    }));
-				},
-				 
-				style: getButtonStyle(),
-				child: Text("Gay", style: getTextStyle())
-			)
+            createButton(
+                () => context.go("/"), 
+                context,
+                "Home"
+            ),
+            createButton(
+                () => context.go("/credits"), 
+                context, 
+                "Credits"
+            )
 		],
 	);
 }
