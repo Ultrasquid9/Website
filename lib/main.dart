@@ -15,7 +15,7 @@ class Website extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return MaterialApp.router(
-			title: "Website",
+			title: "Celeste Project in Flutter",
 
 			theme: ThemeData(
 				useMaterial3: true,
@@ -84,7 +84,7 @@ AppBar getBar(BuildContext context) {
 	return AppBar(
 		
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
-		title: Text("Inkblot Games", style: getTextStyle()),
+		title: Text("Celeste Project in Flutter", style: getTextStyle()),
 		actions: <Widget>[
 			createButton(
 				() => context.go("/",),
