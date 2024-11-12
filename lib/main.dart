@@ -15,7 +15,7 @@ class Website extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		return MaterialApp.router(
-			title: "inkblot Games",
+			title: "Website",
 
 			theme: ThemeData(
 				useMaterial3: true,
