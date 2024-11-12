@@ -70,13 +70,13 @@ TextStyle getTextStyle() {
 
 /// Creates a button
 ElevatedButton createButton(VoidCallback onPressed, BuildContext context, String title) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(
-		    backgroundColor: const Color.fromARGB(255, 41, 44, 60),
-	    ),
-        onPressed: onPressed,
-        child: Text(title, style: getTextStyle())
-    );
+	return ElevatedButton(
+		style: ElevatedButton.styleFrom(
+			backgroundColor: const Color.fromARGB(255, 41, 44, 60),
+		),
+		onPressed: onPressed,
+		child: Text(title, style: getTextStyle())
+	);
 }
 
 /// Gets the navigation bar at the top of the website
@@ -86,16 +86,16 @@ AppBar getBar(BuildContext context) {
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
 		title: Text("Inkblot Games", style: getTextStyle()),
 		actions: <Widget>[
-            createButton(
-                () => context.go("/",), 
-                context,
-                "Home"
-            ),
-            createButton(
-                () => context.go("/credits"), 
-                context, 
-                "Credits"
-            )
+			createButton(
+				() => context.go("/",),
+				context,
+				"Home"
+			),
+			createButton(
+				() => context.go("/credits"),
+				context,
+				"Credits"
+			)
 		],
 	);
 }
