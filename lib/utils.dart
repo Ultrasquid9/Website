@@ -41,51 +41,65 @@ TextStyle getTextStyle() {
 }
 
 /// Creates a button
-ElevatedButton createButton(VoidCallback onPressed, BuildContext context, String title) {
-	return ElevatedButton(
-		style: ElevatedButton.styleFrom(
-			backgroundColor: const Color.fromARGB(255, 41, 44, 60),
+FilledButton createButton(VoidCallback onPressed, BuildContext context, IconData icon, String title) {
+	var textColor = Color.fromARGB(255, 48, 52, 70);
+
+	return FilledButton.icon(
+		style: FilledButton.styleFrom(
+			backgroundColor: const Color.fromARGB(255, 202, 158, 230),
 		),
 		onPressed: onPressed,
-		child: Text(title, style: getTextStyle())
+		icon: Icon(
+			icon,
+			color: textColor
+		),
+		label: Text(title, style: TextStyle(
+			color: textColor
+		))
 	);
 }
 
 /// Gets the navigation bar at the top of the website
 AppBar getBar(BuildContext context) {
 	return AppBar(
-		
 		backgroundColor: const Color.fromARGB(255, 35, 38, 52),
 		title: Text("Celeste Project in Flutter", style: getTextStyle()),
+
 		actions: <Widget>[
 			createButton(
 				() => context.go("/",),
 				context,
+				Icons.home,
 				"Home"
 			),
 			createButton(
 				() => context.go("/background"),
 				context,
+				Icons.menu_book,
 				"Background"
 			),
 			createButton(
 				() => context.go("/mental_health"),
 				context,
+				Icons.heart_broken,
 				"Mental Health"
 			),
 			createButton(
 				() => context.go("/mirror"),
 				context,
+				Icons.account_box,
 				"The Mirror"
 			),
 			createButton(
 				() => context.go("/naysayers"),
 				context,
+				Icons.edit_off,
 				"Naysayers"
 			),
 			createButton(
 				() => context.go("/credits"),
 				context,
+				Icons.category_rounded,
 				"Credits"
 			)
 		],
