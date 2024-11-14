@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:website/utils.dart';
 
-class Credits extends StatefulWidget {
-	const Credits({super.key, required this.title});
+class Mirror extends StatefulWidget {
+	const Mirror({super.key, required this.title});
 
 	final String title;
-	@override State<Credits> createState() => _CreditsState();
+	@override State<Mirror> createState() => _MirrorState();
 }
 
-class _CreditsState extends State<Credits> {
+class _MirrorState extends State<Mirror> {
 	@override Widget build(BuildContext context) {
 		return createPage(
 			context, 
 			[
 				SelectableText(
-					"credits", 
+					"mirror", 
 					style: getTextStyle(),
 				)
 			]

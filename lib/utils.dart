@@ -64,6 +64,26 @@ AppBar getBar(BuildContext context) {
 				"Home"
 			),
 			createButton(
+				() => context.go("/background"),
+				context,
+				"Background"
+			),
+			createButton(
+				() => context.go("/mental_health"),
+				context,
+				"Mental Health"
+			),
+			createButton(
+				() => context.go("/mirror"),
+				context,
+				"The Mirror"
+			),
+			createButton(
+				() => context.go("/naysayers"),
+				context,
+				"Naysayers"
+			),
+			createButton(
 				() => context.go("/credits"),
 				context,
 				"Credits"

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:website/utils.dart';
 
-class Credits extends StatefulWidget {
-	const Credits({super.key, required this.title});
+class Background extends StatefulWidget {
+	const Background({super.key, required this.title});
 
 	final String title;
-	@override State<Credits> createState() => _CreditsState();
+	@override State<Background> createState() => _BackgroundState();
 }
 
-class _CreditsState extends State<Credits> {
+class _BackgroundState extends State<Background> {
 	@override Widget build(BuildContext context) {
 		return createPage(
 			context, 
 			[
 				SelectableText(
-					"credits", 
+					"background", 
 					style: getTextStyle(),
 				)
 			]
