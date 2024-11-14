@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:website/main.dart';
+import 'package:website/utils.dart';
 
 class Credits extends StatefulWidget {
 	const Credits({super.key, required this.title});
