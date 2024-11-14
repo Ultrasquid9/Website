@@ -10,13 +10,11 @@ class Credits extends StatefulWidget {
 
 class _CreditsState extends State<Credits> {
 	@override Widget build(BuildContext context) {
-		return Scaffold(
-			appBar: getBar(context),
-			body: const Center(
-				child:Card(
-					color: Color.fromARGB(255, 48, 52, 70),
-				)
-			)
+		return createPage(
+			context, 
+			[
+				
+			]
 		);
 	}
 }
