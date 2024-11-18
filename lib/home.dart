@@ -24,6 +24,7 @@ class _HomeState extends State<Home> {
                     constraints: const BoxConstraints(maxHeight: 300),
                     child: CarouselView(
                         itemExtent: 400, 
+                        shrinkExtent: 200,
                         children: [
                             Image.network("https://maddymakesgames.com/articles/is_maddy_trans/images/header.webp", fit: BoxFit.cover),
                             Image.network("https://maddymakesgames.com/articles/is_maddy_trans/images/farewell.webp", fit: BoxFit.cover),
