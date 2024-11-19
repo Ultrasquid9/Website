@@ -13,11 +13,18 @@ class _NaysayersState extends State<Naysayers> {
 		return createPage(
 			context, 
 			[
+                createTitle("Naysayers"),
 				SelectableText(
-					"naysayers", 
+					text(), 
 					style: getTextStyle(),
 				)
 			]
 		);
 	}
+}
+
+String text() {
+    return 
+    "maysayers"
+    "";
 }

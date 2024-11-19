@@ -33,6 +33,16 @@ CustomTransitionPage getPageTransition(BuildContext context, GoRouterState state
 	);
 }
 
+Center createTitle(String text) {
+    return Center(child: Text(
+        '$text \n',
+        style: TextStyle(
+            fontSize: 24,
+            color: Color.fromARGB(255, 198, 208, 245)
+        ),
+    ));
+}
+
 /// Gets the style for text
 TextStyle getTextStyle() {
 	return const TextStyle(

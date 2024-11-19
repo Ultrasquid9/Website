@@ -13,11 +13,19 @@ class _BackgroundState extends State<Background> {
 		return createPage(
 			context, 
 			[
+                createTitle("Background"),
 				SelectableText(
-					"background", 
+					text(),
 					style: getTextStyle(),
 				)
 			]
 		);
 	}
+}
+
+String text() {
+	return 
+    "\n\n"
+    "background"
+    "";
 }

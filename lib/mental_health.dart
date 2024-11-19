@@ -13,11 +13,18 @@ class _MentalHealthState extends State<MentalHealth> {
 		return createPage(
 			context, 
 			[
+                createTitle("Mental Health"),
 				SelectableText(
-					"mental health", 
+					text(), 
 					style: getTextStyle(),
 				)
 			]
 		);
 	}
+}
+
+String text() {
+    return 
+    "mental health"
+    "";
 }

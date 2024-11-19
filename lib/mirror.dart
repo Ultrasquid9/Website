@@ -13,11 +13,18 @@ class _MirrorState extends State<Mirror> {
 		return createPage(
 			context, 
 			[
+                createTitle("Mirror"),
 				SelectableText(
-					"mirror", 
+					text(), 
 					style: getTextStyle(),
 				)
 			]
 		);
 	}
+}
+
+String text() {
+    return 
+    "mirror"
+    "";
 }
