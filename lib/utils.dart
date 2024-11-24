@@ -34,13 +34,13 @@ CustomTransitionPage getPageTransition(BuildContext context, GoRouterState state
 }
 
 Center createTitle(String text) {
-    return Center(child: Text(
-        '$text \n',
-        style: TextStyle(
-            fontSize: 24,
-            color: Color.fromARGB(255, 198, 208, 245)
-        ),
-    ));
+	return Center(child: Text(
+		'$text \n',
+		style: TextStyle(
+			fontSize: 24,
+			color: Color.fromARGB(255, 198, 208, 245)
+		),
+	));
 }
 
 /// Gets the style for text
@@ -99,12 +99,6 @@ AppBar getBar(BuildContext context) {
 				context,
 				Icons.account_box,
 				"The Mirror"
-			),
-			createButton(
-				() => context.go("/naysayers"),
-				context,
-				Icons.edit_off,
-				"Naysayers"
 			),
 			createButton(
 				() => context.go("/credits"),

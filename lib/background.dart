@@ -13,7 +13,7 @@ class _BackgroundState extends State<Background> {
 		return createPage(
 			context, 
 			[
-                createTitle("Background"),
+				createTitle("Background"),
 				SelectableText(
 					text(),
 					style: getTextStyle(),
@@ -25,10 +25,8 @@ class _BackgroundState extends State<Background> {
 
 String text() {
 	return 
-    "\n\n"
-    "background"
-    "";
+	"\n\n"
+	"Celeste was written by Maddy Thorson, a transgender woman. As she stated on her blog, while she did not know that she "
+	"was transgender while writing the game, the game was written from a trans perspective, and as such includes transgender themes."
+	"";
 }
-/* Maddy Thorson’s Experience (AKA Background)
-Celeste was written by Maddy Thorson, a transgender woman. As she stated on her blog, while she did not know that she was transgender while writing the game, the game was written from a trans perspective, and as such includes transgender themes. 
- */
