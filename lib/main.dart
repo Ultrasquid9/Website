@@ -5,6 +5,7 @@ import 'package:website/home.dart';
 import 'package:go_router/go_router.dart';
 import 'package:website/mental_health.dart';
 import 'package:website/mirror.dart';
+import 'package:website/part_of_you.dart';
 import 'package:website/utils.dart';
 
 /// Exists exclusively for the purpose of running the website
@@ -52,6 +53,11 @@ final _router = GoRouter(
 			path: '/mental_health',
 			pageBuilder: (context, state) => 
 				getPageTransition(context, state, const MentalHealth(title: "Mental Health"))
+		),
+		GoRoute(
+			path: '/part_of_you',
+			pageBuilder: (context, state) => 
+				getPageTransition(context, state, const PartOfYou(title: "Part Of You"))
 		),
 		GoRoute(
 			path: '/mirror',

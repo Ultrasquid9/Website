@@ -32,6 +32,9 @@ String text() {
 	"\n"
 	"\nCarmel, Tamar C., and Laura Erickson-Schroth. \"Mental health and the transgender population.\" Journal of psychosocial "
 	"nursing and mental health services 54.12 (2016): 44-48."
+    "\n"
+    "\nVillegas Simón, Isabel, Juan Jose Sanchez Soriano, and Rafael Ventura. \"‘If you don’t “pass” as cis, you don’t exist’. "
+    "The trans audience's reproofs of ‘Cis Gaze’and transnormativity in TV series.\" European Journal of Communication 39.1 (2024): 22-36."
 	
 	"";
 }

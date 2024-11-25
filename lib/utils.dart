@@ -94,6 +94,12 @@ AppBar getBar(BuildContext context) {
 				Icons.heart_broken,
 				"Mental Health"
 			),
+            createButton(
+				() => context.go("/part_of_you"),
+				context,
+				Icons.people_alt,
+				"Part Of You"
+			),
 			createButton(
 				() => context.go("/mirror"),
 				context,
