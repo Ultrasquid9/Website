@@ -43,7 +43,7 @@ String text() {
 	"Celeste is a game which is pretty heavily tied to transgender experiences. "
 	"Its story is all about mental health, self-acceptance, and overcoming obstacles "
 	"in life, and was written from the perspective of a trans woman who, at the "
-	"time, was grappling with her own gender identity [insert citation here]."
+	"time, was grappling with her own gender identity (Thorson)."
 	"\n\n"
 	"The Celeste Transgender website is a website dedicated to showcasing how the "
 	"video game Celeste can be read from a transgender point of view. It showcases "

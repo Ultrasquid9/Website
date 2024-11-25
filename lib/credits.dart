@@ -29,7 +29,7 @@ String text() {
 	"\n"
 	"\nInderbinen, Marc, et al. \"Relationship of internalized transnegativity and protective factors with depression, anxiety, non-suicidal "
 	"self-injury and suicidal tendency in trans populations: A systematic review.\" Frontiers in psychiatry 12 (2021): 636513."
-	"\nYeah but there's going to be no 2d mario games now"
+	"\n"
 	"\nCarmel, Tamar C., and Laura Erickson-Schroth. \"Mental health and the transgender population.\" Journal of psychosocial "
 	"nursing and mental health services 54.12 (2016): 44-48."
 	
